@@ -1,16 +1,18 @@
 package org.example.addressbook.dto;
 
-
 public class ContactDTO {
     private String name;
     private String phone;
 
-    public ContactDTO() {}
+    public ContactDTO() {
+    }
 
     public ContactDTO(String name, String phone) {
         this.name = name;
         this.phone = phone;
     }
+
+    // Getters & Setters
 
     public String getName() {
         return name;

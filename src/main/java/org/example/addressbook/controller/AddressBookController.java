@@ -1,4 +1,5 @@
 package org.example.addressbook.controller;
+import org.example.addressbook.dto.ContactDTO;
 
 import org.example.addressbook.model.Contact;
 import org.example.addressbook.service.ContactService;
@@ -7,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/contacts")
@@ -23,34 +25,22 @@ public class AddressBookController {
     @GetMapping("/{id}")
     public ResponseEntity<Contact> getContactById(@PathVariable int id) {
         Contact contact = contactService.getContactById(id);
-        if (contact != null) {
-            return ResponseEntity.ok(contact);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        return contact != null ? ResponseEntity.ok(contact) : ResponseEntity.notFound().build();
     }
 
     @PostMapping
-    public ResponseEntity<Contact> addContact(@RequestBody Contact contact) {
-        return ResponseEntity.ok(contactService.addContact(contact));
+    public ResponseEntity<Contact> addContact(@RequestBody ContactDTO contactDTO) {
+        return ResponseEntity.ok(contactService.addContact(contactDTO));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Contact> updateContact(@PathVariable int id, @RequestBody Contact contact) {
-        Contact updated = contactService.updateContact(id, contact);
-        if (updated != null) {
-            return ResponseEntity.ok(updated);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<Contact> updateContact(@PathVariable int id, @RequestBody ContactDTO contactDTO) {
+        Contact updated = contactService.updateContact(id, contactDTO);
+        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteContact(@PathVariable int id) {
-        if (contactService.deleteContact(id)) {
-            return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        return contactService.deleteContact(id) ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
     }
 }

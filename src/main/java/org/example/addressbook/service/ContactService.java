@@ -1,4 +1,5 @@
 package org.example.addressbook.service;
+import org.example.addressbook.dto.ContactDTO;
 
 import org.example.addressbook.model.Contact;
 import org.springframework.stereotype.Service;
