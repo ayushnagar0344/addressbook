@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+// UC2
 @Service
 public class ContactService {
     private final Map<Integer, Contact> contactMap = new HashMap<>();
@@ -18,13 +19,13 @@ public class ContactService {
         return contactMap.get(id);
     }
 
-    public Contact addContact(Contact dto) {
+    public Contact addContact(ContactDTO dto) {
         Contact contact = new Contact(idCounter++, dto.getName(), dto.getPhone());
         contactMap.put(contact.getId(), contact);
         return contact;
     }
 
-    public Contact updateContact(int id, Contact dto) {
+    public Contact updateContact(int id, ContactDTO dto) {
         if (!contactMap.containsKey(id)) {
             return null;
         }
