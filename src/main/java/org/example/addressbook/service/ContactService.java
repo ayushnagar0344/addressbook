@@ -18,19 +18,19 @@ public class ContactService {
         return contactMap.get(id);
     }
 
-    public Contact addContact(Contact contact) {
-        contact.setId(idCounter++);
+    public Contact addContact(Contact dto) {
+        Contact contact = new Contact(idCounter++, dto.getName(), dto.getPhone());
         contactMap.put(contact.getId(), contact);
         return contact;
     }
 
-    public Contact updateContact(int id, Contact contact) {
+    public Contact updateContact(int id, Contact dto) {
         if (!contactMap.containsKey(id)) {
             return null;
         }
-        contact.setId(id);
-        contactMap.put(id, contact);
-        return contact;
+        Contact updated = new Contact(id, dto.getName(), dto.getPhone());
+        contactMap.put(id, updated);
+        return updated;
     }
 
     public boolean deleteContact(int id) {

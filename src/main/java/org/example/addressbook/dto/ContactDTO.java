@@ -1,24 +1,15 @@
-package org.example.addressbook.model;
+package org.example.addressbook.dto;
 
-public class Contact {
-    private int id;
+
+public class ContactDTO {
     private String name;
     private String phone;
 
-    public Contact() {}
+    public ContactDTO() {}
 
-    public Contact(int id, String name, String phone) {
-        this.id = id;
+    public ContactDTO(String name, String phone) {
         this.name = name;
         this.phone = phone;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -37,4 +28,3 @@ public class Contact {
         this.phone = phone;
     }
 }
-
