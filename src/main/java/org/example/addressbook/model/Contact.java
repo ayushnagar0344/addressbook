@@ -1,40 +1,31 @@
 package org.example.addressbook.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * The entity class representing a Contact in the AddressBook system.
+ */
+@Entity // Marks this class as a JPA entity to be managed by Hibernate.
+@Data // Lombok annotation to generate getters, setters, and other methods.
+@NoArgsConstructor // Generates a required no-args constructor.
+@AllArgsConstructor // Generates a constructor with all fields.
 public class Contact {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-increment primary key.
+    private Integer id;
+
+   
+   
     private String name;
-    private String phone;
 
-    public Contact() {}
+    private String email;
 
-    public Contact(int id, String name, String phone) {
-        this.id = id;
-        this.name = name;
-        this.phone = phone;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    // Optionally, you can add custom logic or methods if needed.
 }
-

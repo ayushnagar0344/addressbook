@@ -1,6 +1,14 @@
 package org.example.addressbook.dto;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
+
 public class ContactDTO {
+
+    @NotEmpty(message = "Name is required and cannot be empty")
+    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "Name can only contain letters and spaces")
+
+
     private String name;
     private String phone;
 
