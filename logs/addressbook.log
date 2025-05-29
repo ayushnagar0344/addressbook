@@ -185,3 +185,38 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class org.exa
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
 	... 45 common frames omitted
 
+2025-04-24T10:13:33.930+05:30  INFO 8024 --- [AddressBook] [main] o.e.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 17.0.14 with PID 8024 (C:\Users\hp\IdeaProjects\AddressBook\target\classes started by hp in C:\Users\hp\IdeaProjects\AddressBook)
+2025-04-24T10:13:33.938+05:30  INFO 8024 --- [AddressBook] [main] o.e.addressbook.AddressBookApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-24T10:13:36.542+05:30  INFO 8024 --- [AddressBook] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-24T10:13:36.764+05:30  INFO 8024 --- [AddressBook] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 1 JPA repository interface.
+2025-04-24T10:13:38.169+05:30  INFO 8024 --- [AddressBook] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-24T10:13:38.208+05:30  INFO 8024 --- [AddressBook] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-24T10:13:38.209+05:30  INFO 8024 --- [AddressBook] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-24T10:13:38.368+05:30  INFO 8024 --- [AddressBook] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-24T10:13:38.369+05:30  INFO 8024 --- [AddressBook] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4289 ms
+2025-04-24T10:13:38.826+05:30  INFO 8024 --- [AddressBook] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-24T10:13:38.992+05:30  INFO 8024 --- [AddressBook] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-24T10:13:39.113+05:30  INFO 8024 --- [AddressBook] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-24T10:13:40.055+05:30  INFO 8024 --- [AddressBook] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-24T10:13:40.163+05:30  INFO 8024 --- [AddressBook] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-24T10:13:41.359+05:30  INFO 8024 --- [AddressBook] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42576db9
+2025-04-24T10:13:41.367+05:30  INFO 8024 --- [AddressBook] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-24T10:13:41.757+05:30  INFO 8024 --- [AddressBook] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-24T10:13:44.547+05:30  INFO 8024 --- [AddressBook] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-24T10:13:45.068+05:30  INFO 8024 --- [AddressBook] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-24T10:13:46.287+05:30  WARN 8024 --- [AddressBook] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-24T10:13:46.453+05:30  INFO 8024 --- [AddressBook] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-24T10:13:48.248+05:30  INFO 8024 --- [AddressBook] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-24T10:13:48.292+05:30  INFO 8024 --- [AddressBook] [main] o.e.addressbook.AddressBookApplication   : Started AddressBookApplication in 16.143 seconds (process running for 19.367)
+2025-04-24T10:29:19.994+05:30  INFO 8024 --- [AddressBook] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-24T10:29:23.190+05:30  INFO 8024 --- [AddressBook] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-24T10:29:23.979+05:30  INFO 8024 --- [AddressBook] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-24T10:29:24.448+05:30  INFO 8024 --- [AddressBook] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-24T10:29:25.266+05:30  INFO 8024 --- [AddressBook] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
